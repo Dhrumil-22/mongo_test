@@ -49,7 +49,7 @@ app.post("/register", async (req, res) => {
 
         await user.save();
 
-        res.sendFile(__dirname + "/login.html");
+       res.redirect("/login.html");
         
     } catch (error) {
         
@@ -90,4 +90,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Server running");
 });
+
 
