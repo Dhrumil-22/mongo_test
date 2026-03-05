@@ -10,6 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
 
+
+app.get("/", (req, res) => {
+    res.send("Server is running");
+});
+
 /* ------------------ DATABASE CONNECTION ------------------ */
 
 mongoose.connect("mongodb+srv://dhrumilvaghela22_db_user:RkVTx17DAZumDo7K@cluster0.xzbjlpd.mongodb.net/project")
@@ -85,3 +90,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Server running");
 });
+
