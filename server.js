@@ -49,7 +49,7 @@ app.post("/register", async (req, res) => {
 
         await user.save();
 
-       res.redirect("/login.html");
+       res.redirect("https://dhrumil-22.github.io/mongo_test/login.html");
         
     } catch (error) {
         
@@ -90,5 +90,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Server running");
 });
+
 
 
